@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
     const int LINE_SIZE = 16;
     const int LINES = IMAGE_SIZE / LINE_SIZE;
     for (int line_count = 0; line_count < LINES; ++line_count) {
-        printf("%03x:", line_count * LINE_SIZE); 
+        fprintf(stdout, "%03x:", line_count * LINE_SIZE); 
         for (int byte_count = 0; byte_count < LINE_SIZE; ++byte_count) {
             printf(" %02x", image[line_count * LINE_SIZE + byte_count]); 
         }
